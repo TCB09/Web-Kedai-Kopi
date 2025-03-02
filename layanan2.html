@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Layanan 1</title>
+    <!-- Fonts Google (Poppins) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="style.css"> <!-- Pastikan file CSS utama tetap digunakan -->
+    <link rel="stylesheet" href="layanan-kami2.css"> <!--CSS Untuk tampilan menu-menu nya-->
+
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="logo">Website Saya</div>
+        <div class="menu-container">
+            <ul>
+                <li><a href="index.html#home">Home</a></li>
+                <li><a href="index.html#tentang">Tentang Kami</a></li>
+                <li><a href="index.html#layanan">Layanan Kami</a></li>
+                <li><a href="index.html#galeri">Galeri</a></li>
+                <li><a href="index.html#visi">Visi & Misi</a></li>
+                <li><a href="index.html#kontak">Kontak Kami</a></li>
+            </ul>
+        </div>
+    </nav>
+
+<!-- Hero Section -->
+<section class="hero">
+    <div class="hero-images">
+        <img src="masaaki-komori-vXu9QbMNTEk-unsplash.jpg" class="active" alt="Hero Image 1">
+        <img src="taylor-franz-GJogrGZxKJE-unsplash.jpg" alt="Hero Image 2">
+        <img src="david-dvoracek-21CxT2EYcbw-unsplash.jpg" alt="Hero Image 3">
+        <img src="krists-luhaers-2rCmEresf-c-unsplash.jpg" alt="Hero Image 4">
+    </div>
+    <div class="hero-text">
+        <h1>Layanan 1</h1>
+        <p>Deskripsi singkat mengenai layanan pertama yang kami tawarkan.</p>
+    </div>
+</section>
+
+<!-- Bagian Menu -->
+<section class="menu-section">
+    <h2>Pilih Layanan Kami</h2>
+    <div class="menu-container">
+        <div class="menu-item">
+            <img src="adam-jaime-dmkmrNptMpw-unsplash.jpg" alt="Menu 1">
+            <h3>Menu 1</h3>
+        </div>
+        <div class="menu-item">
+            <img src="charles-chen-w2ZFjDnUL3w-unsplash.jpg" alt="Menu 2">
+            <h3>Menu 2</h3>
+        </div>
+        <div class="menu-item">
+            <img src="michaela-baum-VnM6_liIRJ0-unsplash.jpg" alt="Menu 3">
+            <h3>Menu 3</h3>
+        </div>
+        <div class="menu-item">
+            <img src="lidye-1Shk_PkNkNw-unsplash.jpg" alt="Menu 4">
+            <h3>Menu 4</h3>
+        </div>
+    </div>
+</section>
+
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        let images = document.querySelectorAll(".hero-images img");
+        let currentIndex = 0;
+    
+        function changeSlide() {
+            images[currentIndex].classList.remove("active"); // Hilangkan class active dari gambar sekarang
+            currentIndex = (currentIndex + 1) % images.length; // Pindah ke gambar berikutnya
+            images[currentIndex].classList.add("active"); // Tambahkan class active ke gambar baru
+        }
+    
+        setInterval(changeSlide, 3000); // Ganti slide setiap 3 detik
+    });
+    </script>
+    
+
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+    const links = document.querySelectorAll(".layanan-btn");
+
+    links.forEach(link => {
+        link.addEventListener("click", function(event) {
+            event.preventDefault(); // Mencegah langsung berpindah halaman
+
+            let targetURL = this.href; // Ambil link tujuan
+            document.body.classList.add("fade-out"); // Tambahkan efek fade-out
+
+            setTimeout(() => {
+                window.location.href = targetURL; // Pindah halaman setelah efek selesai
+            }, 500); // Waktu delay harus sama dengan CSS transition (0.5s)
+        });
+    });
+});
+</script>
+
+</body>
+</html>
+

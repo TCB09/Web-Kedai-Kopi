@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galeri</title>
+      <!-- Fonts Google (Poppins) -->
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css"> <!-- CSS Utama -->
+    <link rel="stylesheet" href="galeri.css"> <!-- CSS khusus Galeri -->
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="logo">Website Saya</div>
+        <div class="menu-container">
+            <ul>
+                <li><a href="index.html#home">Home</a></li>
+                <li><a href="index.html#tentang">Tentang Kami</a></li>
+                <li><a href="index.html#layanan">Layanan Kami</a></li>
+                <li><a href="galeri.html">Galeri</a></li>
+                <li><a href="index.html#visi">Visi & Misi</a></li>
+                <li><a href="index.html#kontak">Kontak Kami</a></li>
+            </ul>
+        </div>
+    </nav>
+
+
+
+        <!-- Hero Section -->
+        <section id="home" class="hero">
+            <div class="hero-images">
+                <img src="pylyp-sukhenko-y-XZf_TNRms-unsplash.jpg" class="active" alt="Hero Image 1">
+            </div>
+            <div class="hero-text">
+                <h1>Selamat Datang di Website Kami</h1>
+                <p>Kami siap memberikan layanan terbaik untuk Anda</p>
+            </div>
+        </section>
+
+    <!-- Header Galeri -->
+<section class="galeri-header">
+    <h2>Galeri Foto Kami</h2>
+    <p>Lihat koleksi foto terbaik dari berbagai momen yang kami abadikan.</p>
+</section>
+
+
+    <!-- Galeri Section -->
+    <section class="galeri">
+        <h2>Galeri Kami</h2>
+        <div class="galeri-container">
+            <img src="volodymyr-proskurovskyi-he7QnLQRB9g-unsplash.jpg" alt="Gambar 1" class="galeri-item">
+            <img src="sam-moghadam-yxZSAjyToP4-unsplash.jpg" alt="Gambar 2" class="galeri-item">
+            <img src="sean-benesh-xmRkK0mgJ2U-unsplash.jpg" alt="Gambar 3" class="galeri-item">
+            <img src="jesson-mata-I2Erl2cU_A4-unsplash.jpg" alt="Gambar 4" class="galeri-item">
+            <img src="jez-timms-vSJNnitaDdU-unsplash.jpg" alt="Gambar 5" class="galeri-item">
+            <img src="michal-parzuchowski-ItaV89TNkks-unsplash.jpg" alt="Gambar 6" class="galeri-item">
+        </div>
+    </section>
+
+    <!-- Lightbox -->
+    <div id="lightbox" class="lightbox">
+        <span class="close">&times;</span>
+        <img class="lightbox-content" id="lightbox-img">
+    </div>
+
+    <script src="galeri.js"></script> <!-- JavaScript untuk lightbox -->
+</body>
+</html>

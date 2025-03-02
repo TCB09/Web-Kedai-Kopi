@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tentang Kami</title>
+
+     <!-- Fonts Google (Poppins) -->
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="tentang-kami.css">
+</head>
+<body>
+    
+    <nav class="navbar">
+        <div class="logo">Website Saya</div>
+        <div class="menu-container">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="tentang-kami.html">Tentang Kami</a></li>
+                <li><a href="layanan.html">Layanan Kami</a></li>
+                <li><a href="galeri.html">Galeri</a></li>
+                <li><a href="visi-misi.html">Visi & Misi</a></li>
+                <li><a href="kontak.html">Kontak Kami</a></li>
+            </ul>
+        </div>
+    </nav>
+    
+
+    <section class="hero">
+    </section>
+    
+    <!--Deskripsi-->
+    <section class="description">
+        <div class="container">
+            <h2>Siapa Kami?</h2>
+            <p>Kami adalah perusahaan yang berkomitmen untuk memberikan layanan terbaik kepada pelanggan kami. Dengan pengalaman bertahun-tahun, kami terus berkembang untuk memberikan solusi terbaik.</p>
+        </div>
+    </section>
+   
+    <section class="profile">
+        <div class="profile-container">
+            <img class="hidden" src="quan-le-GKnCGtuR4xs-unsplash.jpg" alt="Foto Profil">
+            <div class="profile-text hidden">
+                <h2>Profil Kami</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            </div>
+        </div>
+    </section>
+    
+    <section class="profile">
+        <div class="profile-container right">
+            <img class="hidden" src="helena-lopes-UZe35tk5UoA-unsplash.jpg" alt="Foto Profil 2">
+            <div class="profile-text hidden">
+                <h2>Profil Kedua</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            </div>
+        </div>
+    </section>
+    
+    
+    <footer>
+        <p>© 2025 Website Saya. All Rights Reserved.</p>
+    </footer>
+
+    <!--Bagian Javascript untuk halaman Tentang Kami-->
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            document.body.classList.add("loaded"); // Tambahkan class loaded setelah halaman siap
+        });
+        </script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const elementsToObserve = document.querySelectorAll(".profile-container img, .profile-text");
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add("show");
+                }
+            });
+        }, {
+            threshold: 0.2 // Elemen muncul ketika 20% dari elemen terlihat
+        });
+
+        elementsToObserve.forEach(element => {
+            observer.observe(element);
+        });
+    });
+</script>
+
+</script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const menuToggle = document.querySelector(".menu-toggle");
+        const navLinks = document.querySelector(".navbar ul");
+
+        if (menuToggle) {
+            menuToggle.addEventListener("click", function () {
+                navLinks.classList.toggle("active");
+            });
+        }
+    });
+</script>
+
+</body>
+</html>
+
